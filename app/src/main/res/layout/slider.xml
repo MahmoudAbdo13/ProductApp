@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="320dp"
+        android:layout_height="394dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:elevation="40dp"
+        android:paddingTop="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/onboarding_one" />
+
+    <TextView
+        android:id="@+id/txt_head"
+        style="@style/LargeTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="-12dp"
+        android:lineSpacingExtra="7sp"
+        android:text="@string/pickup_deli" />
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/onboard_description_one"
+        android:textAlignment="center"
+        android:textAppearance="@style/smallTextStyle" />
+
+
+</RelativeLayout>

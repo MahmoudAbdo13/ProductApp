@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/start"
+    android:elevation="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/title_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_image"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon_image"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_logout"
+        android:background="@drawable/white_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

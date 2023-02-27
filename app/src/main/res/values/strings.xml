@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Food App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="confirm">Confirm</string>
+    <string name="successfully_logged_in">Successfully logged in!</string>
+    <string name="ok">OK</string>
+    <string name="setting_fragment">Setting Fragment</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="terms_fragment">Terms Fragment</string>
+    <string name="search_fragment">Search Fragment</string>
+    <string name="onboard_title_one">Browse your  menu\nand order directly</string>
+    <string name="onboard_description_one">Our app can send you everywhere, even space. For only $2.99 per month</string>
+    <string name="onboard_title_two">Browse your  menu and order directly</string>
+    <string name="onboard_title_three">Browse your  menu\nand order directly</string>
+    <string name="pickup_deli">Pickup delivery at your door</string>
+    <string name="even_to_spa">Even to space with us! Together</string>
+
+    <string name="e_mail">E-mail</string>
+    <string name="enter_email">Your email or phone</string>
+    <string name="password">Password</string>
+    <string name="forgot_pass">Forgot password?</string>
+    <string name="don_t_have">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in_with">Sign in with</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="see_review">See Review</string>
+    <string name="ground_beef">Ground Beef Tacos</string>
+    <string name="brown_the_b">Brown the beef better. Lean ground beef - I like to use 85% lean angus. Garlic - use fresh  chopped. Spices - chili powder, cumin, onion powder.</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="choice_of_a">Choice of Add On</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="with_baked">with baked salmon</string>
+    <string name="found_30_re">Found\n30 results</string>
+    <string name="pepper_juli">Pepper julienned</string>
+    <string name="baby_spinac">Baby spinach</string>
+    <string name="masroom">Masroom</string>
+    <string name="fixed_price">$2.30+</string>
+    <string name="log_out">Log Out</string>
+    <string name="search_food">Search Food</string>
+    <string name="there_is_something_wrong_try_again">There is something wrong, try again</string>
+    <string name="search">Search</string>
+    <string name="profile">My Profile</string>
+    <string name="delivery">Delivery Address</string>
+    <string name="payment">Payment Methods</string>
+    <string name="contact">Contact Us</string>
+    <string name="settings">Settings</string>
+    <string name="helps">Helps &amp; FAQs</string>
+    <string name="my_orders">My Orders</string>
+    <string name="name">Eljad Eenadaz</string>
+    <string name="email">prelookstudio@gmail.com</string>
+
+</resources>

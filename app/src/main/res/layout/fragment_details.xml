@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.productDetails.DetailsFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/product_image"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/onboarding_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView" />
+
+    <ImageButton
+        android:id="@+id/details_back"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_arrow_bg"
+        android:elevation="18dp"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ic_favorite"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintBottom_toBottomOf="@+id/details_back"
+        app:layout_constraintEnd_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="@+id/details_back" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:gravity="top"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/ground_beef"
+        android:textAppearance="@style/ground_beef"
+        android:translationY="-2.32sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_image"
+        app:layout_constraintStart_toStartOf="@+id/product_image"
+        app:layout_constraintTop_toBottomOf="@+id/product_image" />
+
+    <LinearLayout
+        android:id="@+id/rate_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_title">
+
+        <ImageView
+            android:id="@+id/ic_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_rate_star"
+            app:layout_constraintEnd_toEndOf="@+id/product_image"
+            app:layout_constraintTop_toTopOf="@+id/back" />
+
+        <TextView
+            android:id="@+id/rate_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:gravity="top"
+            android:textAppearance="@style/rate"
+            app:layout_constraintTop_toBottomOf="@+id/product_image"
+            tools:text="4.5" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:gravity="top"
+            android:textAppearance="@style/rate_plus"
+            tools:text="(30+)" />
+
+        <TextView
+            android:id="@+id/see_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@string/see_review"
+            android:textAppearance="@style/see_review"
+            app:layout_constraintTop_toBottomOf="@+id/product_image" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/price"
+        layout="@layout/price_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate_container" />
+
+    <ImageButton
+        android:id="@+id/decrease"
+        android:layout_width="30.6dp"
+        android:layout_height="30.6dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/decrease_bg"
+        android:elevation="15dp"
+        android:src="@drawable/ic_decrease"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="@+id/counter"
+        app:layout_constraintEnd_toStartOf="@+id/counter"
+        app:layout_constraintTop_toTopOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:gravity="top"
+        android:text="02"
+        android:textAppearance="@style/count"
+        app:layout_constraintBottom_toBottomOf="@+id/increase"
+        app:layout_constraintEnd_toStartOf="@+id/increase"
+        app:layout_constraintTop_toTopOf="@+id/increase" />
+
+    <ImageButton
+        android:id="@+id/increase"
+        android:layout_width="30.6dp"
+        android:layout_height="30.6dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/start"
+        android:elevation="15dp"
+        android:src="@drawable/ic_increase"
+        app:layout_constraintBottom_toBottomOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/product_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="12dp"
+        android:gravity="top"
+        android:lineSpacingExtra="8sp"
+        android:maxHeight="90dp"
+        android:text="@string/brown_the_b"
+        android:textAppearance="@style/brown_the_b"
+        android:translationY="-3.75sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+
+    <TextView
+        android:id="@+id/choice_of_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:text="@string/choice_of_a"
+        android:textAppearance="@style/choice_of_a"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_details" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice_of_a">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/added_price_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fixed_price"
+                android:textAppearance="@style/add_price" />
+
+            <TextView
+                android:id="@+id/name_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/pepper_juli"
+                android:textAppearance="@style/pepper_juli"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/radio_image_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/redio_one"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+            <TextView
+                android:id="@+id/added_price_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fixed_price"
+                android:textAppearance="@style/add_price" />
+
+            <TextView
+                android:id="@+id/name_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical"
+                android:text="@string/baby_spinac"
+                android:textAppearance="@style/pepper_juli"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/radio_image_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/redio_two" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/added_price_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/fixed_price"
+                android:textAppearance="@style/add_price" />
+
+            <TextView
+                android:id="@+id/name_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/masroom"
+                android:textAppearance="@style/pepper_juli"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/radio_image_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/redio_three" />
+
+        </LinearLayout>
+
+    </RadioGroup>
+
+    <include
+        android:id="@+id/add_to_cart"
+        layout="@layout/image_button"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange_200">#FF9173</color>
+    <color name="orange_500">#FE724C</color>
+    <color name="orange_700">#FA6239</color>
+    <color name="teal_200">#FE724C</color>
+    <color name="teal_700">#FA6239</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="title">#131A38</color>
+    <color name="description">#616772</color>
+    <color name="dots">#80FFC529</color>
+    <color name="indicator">#FFC529</color>
+    <color name="orange">#FE724C</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#5B5B5E</color>
+    <color name="gray_light">#96A19E</color>
+    <color name="blue_light">#767F9D</color>
+</resources>
